@@ -1,0 +1,20 @@
+<ion-view view-title="Users Listing" ng-controller="ListCtrl">
+  <ion-content>
+    <ion-list show-reorder="reordering">
+      <ion-item class="item-remove-animate item-icon-right" ng-repeat="user in users">
+      	<i class="icon icon-left ion-{{user.gender}}"></i>
+        <h2 class="ion-{{user.gender}}"> {{user.name}}</h2>
+        <p> {{user.nationality}}</p>
+
+        <a href="#/edit/{{user.id}}" class="button button-light icon ion-edit"></a>
+      <button class="button button-assertive icon-left ion-trash-b button-small" ng-click="remove(user.id)">Delete</button>
+
+        <ion-reorder-button class="ion-drag" on-reorder="move(user, $fromIndex, $toIndex)"></ion-reorder-button>
+
+        <!-- <ion-option-button class="button-assertive icon-left ion-trash-b" ng-click="remove(user.id)">Delete</ion-option-button> -->
+      </ion-item>
+    </ion-list>
+    <br><br><br>
+  </ion-content>
+ 
+</ion-view>

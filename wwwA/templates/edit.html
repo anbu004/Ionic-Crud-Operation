@@ -1,0 +1,29 @@
+<ion-view view-title="{{EditOpt}}">
+	<ion-content>
+		<div class="list card">
+		<form ng-submit="save()" name="form" novalidate>
+			<div class="item item-input">
+				<input type="text" ng-model="user.name" name="name"placeholder="Employee name"focus-me/" ng-required="true">
+			</div>
+			<div class="item item-input">
+				<input type="text" ng-model="user.age" name="age" placeholder="Employee age" ng-required="true"/>
+			</div>
+			<div class="item item-input item-select">
+				<div class="input-label">
+			    Gender
+			  </div>
+			  <select type="text" ng-model="user.gender"  name="gender"ng-required="true">
+					<option value="man" selected="">Male</option>
+					<option value="woman">Female</option>
+				</select>
+			</div>
+			<div class="item item-input">
+				<input type="text" ng-model="user.nationality"  name="nationality"placeholder="Place" ng-required="true"/>
+			</div>
+			<div class="padding">
+				<button class="button button-block button-positive" type="submit">{{opt}}</button>
+			</div>
+			</form>
+		</div>
+	</ion-content>
+</ion-view>
